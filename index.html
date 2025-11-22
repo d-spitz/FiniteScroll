@@ -11,7 +11,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
 </head>
 
 <body>
@@ -85,6 +84,28 @@
         <p>Who's a good scroller?</p>
       </div>
     </main>
+
+    <script>
+      // Shuffle cards before first paint
+      (function() {
+        const container = document.querySelector('.scroll-container');
+        const cards = Array.from(container.querySelectorAll('.card'));
+        const endMessage = container.querySelector('.end-message');
+
+        // Fisher-Yates shuffle
+        for (let i = cards.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [cards[i], cards[j]] = [cards[j], cards[i]];
+        }
+
+        // Reappend in shuffled order
+        cards.forEach(card => container.appendChild(card));
+        container.appendChild(endMessage);
+
+        // Scroll to top
+        container.scrollTop = 0;
+      })();
+    </script>
 
     <footer class="app-footer">
       <nav class="footer-tabs">
