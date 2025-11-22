@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finite Scroll</title>
+  <meta name="description" content="Nothing is forever, so why scroll?">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="phone-frame">
+    <header class="app-header">
+      <h1>Finite Scroll</h1>
+    </header>
+
+    <main class="scroll-container">
+      <article class="card" id="propositional-logic">
+        <h2>Propositional Logic</h2>
+        <p>What is the structure of reasoning? How do I make a sound argument?</p>
+        <a href="https://web.stanford.edu/class/archive/cs/cs103/cs103.1234/lectures/03/" target="_blank"
+          rel="noopener noreferrer">→ Learn</a>
+      </article>
+
+      <article class="card" id="socratic-dialogues">
+        <h2>Read Plato's Socratic Dialogues</h2>
+        <p>What is truth? What is justice? Can it be taught?</p>
+        <a href="https://classics.mit.edu/Browse/browse-Plato.html" target="_blank" rel="noopener noreferrer">→ Read</a>
+      </article>
+
+      <article class="card" id="steve-reich">
+        <h2>Steve Reich</h2>
+        <p>A famous minimalist composer. Check out <em>Different Trains</em> or <em>Electric Counterpoint</em>.</p>
+        <a href="https://stevereich.com/works/" target="_blank" rel="noopener noreferrer">→ Explore</a>
+      </article>
+
+      <article class="card" id="curry-howard">
+        <h2>Curry-Howard Correspondence</h2>
+        <p>Propositions as types, proofs as programs.</p>
+        <a href="https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence" target="_blank"
+          rel="noopener noreferrer">→ Explore</a>
+      </article>
+
+      <article class="card" id="coq">
+        <h2>Explore Coq Proof Assistant</h2>
+        <p>Write mathematical proofs that a computer can verify.</p>
+        <a href="https://softwarefoundations.cis.upenn.edu/" target="_blank" rel="noopener noreferrer">→ Read</a>
+      </article>
+
+      <article class="card" id="music-theory">
+        <h2>Music Theory Fundamentals</h2>
+        <p>Learn the structure behind music.</p>
+        <a href="https://www.musictheory.net/lessons" target="_blank" rel="noopener noreferrer">→ Learn</a>
+      </article>
+
+      <article class="card" id="portnoys-complaint">
+        <h2>Read Portnoy's Complaint</h2>
+        <p>Philip Roth's magnum opus.</p>
+        <a href="https://en.wikipedia.org/wiki/Portnoy%27s_Complaint" target="_blank"
+          rel="noopener noreferrer">→ Read</a>
+      </article>
+
+      <article class="card" id="russells-paradox">
+        <h2>Russell's Paradox</h2>
+        <p>Does the set of all sets that don't contain themselves contain itself? The foundations of mathematics were never the same.</p>
+        <a href="https://plato.stanford.edu/entries/russell-paradox/" target="_blank" rel="noopener noreferrer">→ Read</a>
+      </article>
+
+      <article class="card" id="genesis">
+        <h2>Read Genesis</h2>
+        <p>One of the most significant creation stories, preserved through the generations.</p>
+        <a href="https://www.sefaria.org/Genesis.1" target="_blank" rel="noopener noreferrer">→ Read</a>
+      </article>
+
+      <div class="end-message">
+        <p>The end.</p>
+        <p>Who's a good scroller?</p>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <nav class="footer-tabs">
+        <a href="index.html" class="tab tab-active">Home</a>
+        <a href="about.html" class="tab">About</a>
+      </nav>
+    </footer>
+
+    <button class="add-button" aria-label="Submit a link" title="Submit a link"
+      onclick="addContentDialog.showModal()">+</button>
+  </div>
+
+  <dialog class="submit-dialog" id="addContentDialog">
+    <div class="dialog-content">
+      <h2>Contribute</h2>
+      <p>Share something worth learning. All submissions subject to review.</p>
+      <form
+        action="https://docs.google.com/forms/d/e/1FAIpQLSfr6PfBLMYVoNZjMP20BH896QwA9r7HBIu0WyfZ2Jvj1UZMow/formResponse"
+        method="POST" target="_blank">
+        <label>
+          Title
+          <input type="text" name="entry.299012504" required placeholder="e.g., Learn Haskell">
+        </label>
+        <label>
+          Description
+          <textarea name="entry.142594970" required placeholder="Why is this worth exploring?"></textarea>
+        </label>
+        <label>
+          Link
+          <input type="url" name="entry.204866637" required placeholder="https://...">
+        </label>
+        <label>
+          Email
+          <input type="email" name="entry.1493628903" required placeholder="your@email.com">
+        </label>
+        <div class="dialog-actions">
+          <button type="button" class="cancel-button" onclick="addContentDialog.close()">Cancel</button>
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+</body>
+
+</html>
