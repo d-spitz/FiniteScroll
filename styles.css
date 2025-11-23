@@ -80,7 +80,6 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
   scrollbar-width: none;
 
   &::-webkit-scrollbar {
@@ -359,7 +358,6 @@ body {
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
-    scroll-behavior: auto !important;
     transition: none !important;
   }
 }
