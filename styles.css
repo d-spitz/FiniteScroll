@@ -7,7 +7,7 @@
   --color-tan: light-dark(#d2b48c, #dac2a4);
   --color-gray-light: light-dark(#cccccc, #333333);
   --color-gray-dark: light-dark(#333333, #cccccc);
-  --color-background: light-dark(#d2b48c, #1a1a1a);
+  --color-background: light-dark(#dec8ab, #1a1a1a);
   --color-surface: light-dark(#ffffff, #2a2a2a);
 
   --phone-inline: 375px;
@@ -59,8 +59,20 @@ body {
   background-color: var(--color-surface);
 
   h1 {
-    font-size: 24px;
+    font-size: 1.6rem;
     color: var(--color-black);
+    text-transform: uppercase;
+    position: relative;
+
+    & span {
+      display: inline-block;
+      transform: rotate(-90deg);
+      text-shadow:
+      1px 1px 0 var(--color-gray-light),
+      -1px -1px 0 var(--color-gray-light);
+    letter-spacing: 0.35rem;
+      margin-inline-end: 0.25rem;
+    }
   }
 }
 
@@ -94,7 +106,7 @@ body {
 
   p {
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.5;
     color: var(--color-gray-dark);
     flex-grow: 1;
   }
@@ -102,8 +114,7 @@ body {
   a {
     display: inline-block;
     color: var(--color-black);
-    text-decoration: underline;
-    font-size: 1rem;
+    font-size: 1.25rem;
     transition: color 0.2s;
     margin-top: auto;
 
@@ -111,6 +122,10 @@ body {
       color: var(--color-tan);
     }
   }
+}
+
+.share-link {
+  text-decoration: none;
 }
 
 .end-message {
@@ -158,7 +173,6 @@ body {
     background: none;
     border-right: 1px solid var(--color-gray-light);
     font-family: inherit;
-    font-size: 14px;
     text-decoration: none;
     color: var(--color-black);
     transition: background-color 0.2s;
@@ -220,6 +234,7 @@ body {
 
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
   }
 
   .dialog-content {
